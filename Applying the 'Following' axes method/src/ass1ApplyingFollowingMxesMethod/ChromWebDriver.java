@@ -32,7 +32,7 @@ public class ChromWebDriver {
 	}
 
 	/**
-	 * Test using text() function, Type of XPath
+	 * Test using 'Following' axes method, Type of XPath
 	 * 
 	 * @throws InterruptedException
 	 */
