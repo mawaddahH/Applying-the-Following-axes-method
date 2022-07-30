@@ -28,7 +28,7 @@ public class ChromWebDriver {
 
 		// Maximize current window
 		driver.manage().window().maximize();
-		
+
 	}
 
 	/**
@@ -39,8 +39,8 @@ public class ChromWebDriver {
 	@Test
 	public void LearnEnglishWebSite() throws InterruptedException {
 		// Delay execution for 3 seconds to see the result carefully.
-				Thread.sleep(5000);
-		
+		Thread.sleep(5000);
+
 		// ex1 ------- 'Following' axes method using same tagname "a"
 		WebElement textMethod1 = driver
 				.findElement(By.xpath("//a[text()='new releases']/following::a[text()='all templates']"));
@@ -50,29 +50,27 @@ public class ChromWebDriver {
 		// Delay execution for 3 seconds to see the result carefully.
 		Thread.sleep(5000);
 
-		// ex2 ------- 'Following' axes method using different tagneme "button" and "input"
-		WebElement textMethod2 = driver.findElement(By.xpath("//button[@class='search-form__btn']/following::input[@class='search-form__input']"));
-		textMethod2.sendKeys("code",Keys.ENTER);
+		// ex2 ------- 'Following' axes method using different tagneme "button" and
+		// "input"
+		WebElement textMethod2 = driver.findElement(
+				By.xpath("//button[@class='search-form__btn']/following::input[@class='search-form__input']"));
+		textMethod2.sendKeys("code", Keys.ENTER);
 		System.out.println("ex2 DONE Successfully");
 		Thread.sleep(5000);
 
 		// ex3 ------- 'Following' axes method with AND operation
-		WebElement textMethod3 = driver.
-				findElement(By.
-						xpath("//a[@href='/pricing']/following::a[@href='/login' and contains(text(),'Log In')]"));
+		WebElement textMethod3 = driver.findElement(
+				By.xpath("//a[@href='/pricing']/following::a[@href='/login' and contains(text(),'Log In')]"));
 		textMethod3.click();
 		Thread.sleep(5000);
 		System.out.println("ex3 DONE Successfully");
 
-
 		// ex4 ------- 'Following' axes method with OR operation
-		WebElement textMethod4 = driver
-				.findElement(By.xpath("//label[starts-with(text(),'Email address')]/following::input[contains(@name,'email') or @class='from-filed__input-area'][1]"));
+		WebElement textMethod4 = driver.findElement(By.xpath(
+				"//label[starts-with(text(),'Email address')]/following::input[contains(@name,'email') or @class='from-filed__input-area'][1]"));
 		textMethod4.sendKeys("Well Done Mawaddah");
 		System.out.println("ex4 DONE Successfully");
 		Thread.sleep(5000);
-		
-
 
 	}
 
